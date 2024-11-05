@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Philosopher&family=Poppins:wght@300&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #e5e5e5;
+    color: #333333;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+:root {
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Philosopher', sans-serif;
+    --primary-color: #0774e6 ;
+    --secondary-color: #ff005e;
+
+    /* color  */
+    --global-color-0: #0086f8;
+    --global-color-1: #0086f8;
+
+--global-color-3: #3e4359;
+--global-color-4: #f7f7f7;
+--global-color-5: #fff;
+--global-color-6: #243673;
+--global-color-7: #BFD1FF;
+
+
+}
+
+/* sectionFirst */
+
+
+.slider-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.slider-content {
+    position: relative;
+    height: 500px; /* Adjust the height here */
+    overflow: hidden;
+}
+
+.slider-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider-section.active {
+    opacity: 1;
+}
+
+.slider-section h2 {
+    text-align: center;
+    padding: 1rem;
+    background-color: #003459;
+    color: #fff;
+}
+
+.slider-items {
+    position: relative;
+    height: calc(100% - 60px);
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider-item.active {
+    opacity: 1;
+}
+
+.slider-image {
+    width: 40%; /* Adjust the width of the image here */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.slider-text {
+    width: 55%; /* Adjust the width of the text here */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider-text h3 {
+    margin-bottom: 1rem;
+    color: #003459;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #003459;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #00171F;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.control-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .slider-item {
+        flex-direction: column;
+    }
+
+    .slider-image, .slider-text {
+        width: 100%;
+    }
+
+    .slider-image {
+        height: 40%; /* Adjust the height on mobile if needed */
+    }
+
+    .slider-content {
+        height: 600px; /* Adjust mobile height here */
+    }
+}
+
+.aboutServices .ser-litText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    text-align: center;
+    color: var(--global-color-1);
+}
+
+.aboutServices .ser-text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
